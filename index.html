@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
     <title>About Daniel</title>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
 </head>
 
 <body>
@@ -30,92 +30,110 @@
     </header>
 
     <div class="page-content">
-        <div class="main" id="home">
+        <div class="main fade-in" id="home">
             <h1 class="main-title">
                 Hi, I am Daniel
             </h1>
             <img src="images/me.png" , alt="Image of Daniel Maspoch">
-            <h1 class="subtitle" id="about">About Me</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia non nostrum blanditiis repellendus
-                dicta
-                voluptatum.
-            </p>
+            <div class = "info-container fade-in">
+                <h1 class="subtitle" id="about">About Me</h1>
+            </div>
+            <div class="info-container fade-in">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia non nostrum blanditiis
+                    repellendus
+                    dicta
+                    voluptatum.
+                </p>
+            </div>
         </div>
 
         <div class="skills" id="skills">
-            <h1 class="subtitle">
-                Skills
-            </h1>
-            <ul style="list-style-type:square">
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis, voluptates
-                    non
-                    optio?</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis, voluptates
-                    non
-                    optio?</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis, voluptates
-                    non
-                    optio?</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis, voluptates
-                    non
-                    optio?</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis, voluptates
-                    non
-                    optio?</li>
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis, voluptates
-                    non
-                    optio?</li>
-            </ul>
+            <div class="info-container fade-in">
+                <h1 class="subtitle">
+                    Skills
+                </h1>
+            </div>
+            <div class="info-container fade-in">
+                <ul style="list-style-type:square">
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis,
+                        voluptates
+                        non
+                        optio?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis,
+                        voluptates
+                        non
+                        optio?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis,
+                        voluptates
+                        non
+                        optio?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis,
+                        voluptates
+                        non
+                        optio?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis,
+                        voluptates
+                        non
+                        optio?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quas ab perspiciatis,
+                        voluptates
+                        non
+                        optio?</li>
+                </ul>
+            </div>
         </div>
-        <div class="projects" id="projects">
+    </div>
+    <div class="projects" id="projects">
+        <div class="info-container fade-in">
             <h1 class="subtitle">
                 Projects
             </h1>
-            <div class="row">
-                <div class="left-text-col">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, non minus obcaecati tempore
-                        deleniti voluptate?
-                    </p>
-                </div>
-                <div class="right-img-col">
-                    <img src="images/screenshot1.jpg">
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="left-img-col">
-                    <img src="images/screenshot2.jpg">
-                </div>
-                <div class="right-text-col">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, non minus obcaecati tempore
-                        deleniti
-                        voluptate?
-                    </p>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="left-text-col">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, non minus obcaecati tempore
-                        deleniti voluptate?
-                    </p>
-                </div>
-                <div class="right-img-col">
-                    <img src="images/screenshot3.jpg">
-                </div>
-
-            </div>
         </div>
+        <div class="row fade-in">
+            <div class="left-text-col">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, non minus obcaecati tempore
+                    deleniti voluptate?
+                </p>
+            </div>
+            <div class="right-img-col">
+                <img src="images/screenshot1.jpg">
+            </div>
+
+        </div>
+        <div class="row fade-in">
+            <div class="left-img-col">
+                <img src="images/screenshot2.jpg">
+            </div>
+            <div class="right-text-col">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, non minus obcaecati tempore
+                    deleniti
+                    voluptate?
+                </p>
+            </div>
+
+        </div>
+        <div class="row fade-in">
+            <div class="left-text-col">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, non minus obcaecati tempore
+                    deleniti voluptate?
+                </p>
+            </div>
+            <div class="right-img-col">
+                <img src="images/screenshot3.jpg">
+            </div>
+
+        </div>
+    </div>
 
     </div>
     </div>
     </div>
     </div>
-
+    <script src="js/observer.js"></script>
 </body>
 
 </html>

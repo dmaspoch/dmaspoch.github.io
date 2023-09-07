@@ -19,6 +19,16 @@ html
     scroll-padding: 6rem;
 }
 
+.fade-in {
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+
 /*Navigation styles start here*/
 :root {
    --background: rgba(0, 0, 0, 0.8);
@@ -170,12 +180,15 @@ li {
     margin-bottom: 10px;
 }
 
+.info-container
+{
+    display: flex;
+    flex-direction: column;
+}
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin: 0 auto; */
-    /* padding-bottom: 1rem;  */
 }
 
 .left-img-col,
@@ -200,9 +213,11 @@ li {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
     font-size: 2rem;
     text-align: center;
-    width: 85%;
+    width: 55%;
     margin: 0 auto;
 }
 
