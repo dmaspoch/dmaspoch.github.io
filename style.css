@@ -19,6 +19,30 @@ html
     scroll-padding: 6rem;
 }
 
+footer
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 1em;
+    padding-bottom: 0;
+}
+.footer-logo
+{
+    margin-left: 1em;
+}
+
+.links-container
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
 .fade-in {
     display: none;
     opacity: 0;
@@ -40,6 +64,10 @@ html
     box-sizing: border-box;
 }
 
+ul
+{
+    align-self: center;
+}
 header {
     background: var(--background);
     text-align: center;
@@ -224,10 +252,17 @@ li {
 .skills {
     /*background-color: #212122;*/
 }
-ul
-{
-    align-self: center;
-}
+
+.shrink img {
+    transition: 0.5s ease;
+    }
+    
+    .shrink img:hover{
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+    transition: 1s ease;
+    }
 
 @media screen and (min-width: 800px)
 {
