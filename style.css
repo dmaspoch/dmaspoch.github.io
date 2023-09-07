@@ -13,6 +13,12 @@
     font-style: normal;
 }
 
+html
+{
+    scroll-behavior: smooth;
+    scroll-padding: 6rem;
+}
+
 /*Navigation styles start here*/
 :root {
    --background: rgba(0, 0, 0, 0.8);
@@ -143,10 +149,10 @@ h1 {
 
 .main-title
 {
-    padding-top: 4.75rem;
+    padding-top: 1em;
 }
 .subtitle {
-    padding-top: 4.65rem;
+    padding-top: 1em;
     text-align: center;
     font-size: 2.5rem;
 
