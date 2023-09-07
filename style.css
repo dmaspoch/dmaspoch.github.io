@@ -224,6 +224,10 @@ li {
 .skills {
     /*background-color: #212122;*/
 }
+ul
+{
+    align-self: center;
+}
 
 @media screen and (min-width: 800px)
 {
