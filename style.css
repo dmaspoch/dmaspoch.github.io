@@ -1,22 +1,129 @@
-/* Challenge
+@font-face {
+    font-family: "Sk-Modernist";
+    src: url("fonts/Sk-Modernist-Regular.otf");
+    font-weight: 200;
+    font-style: normal;
+}
 
-   Make the navigation layout work
-   on both mobile and large screens.
 
-   Mobile-first, so mobile styles first,
-   then add the large screen styles
-   inside the existing media query
+@font-face {
+    font-family: "Sk-Modernist";
+    src: url("fonts/Sk-Modernist-Bold.otf");
+    font-weight: 400;
+    font-style: normal;
+}
 
-*/
+/*Navigation styles start here*/
+:root {
+   --background: rgba(0, 0, 0, 0.5);
+}
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-body {
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+.nav-toggle:checked~nav {
+ transform: scale(1,1);   
+}
+.nav-toggle:checked~nav a
+{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+
+}
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span, .nav-toggle-label span::before,
+.nav-toggle-label span::after
+ {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after
+{
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before
+{
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after
+{
+    top: 7px;
+}
+
+
+body {
+    font-family: 'Sk-Modernist', sans-serif;
+    background-color: #171717;
 }
 
 img {
@@ -24,236 +131,126 @@ img {
 }
 
 h1 {
-    font-size: 3rem;
-    margin-top: 0;
+    font-weight: 400;
+    /*color: #FA7B7B;*/
+    /* background: linear-gradient(to right, #f32170,
+            #ff6b08, #cf23cf, #eedd44); */
+    background: linear-gradient(to right, white, #FA7B7B, #cf23cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
-.section-title {
-    color: #87629A;
+.main-title
+{
+    padding-top: 4.75rem;
 }
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase; 
-    color: #23424A;
-    font-weight: 900;
-    background-color: #38CFD9;
-    padding: .75em 2em;
-    border-radius: 100px;
-}
-
-.btn:hover,
-.btn:focus {
-    opacity: .75; 
-}
-
-.container {
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto;
-    /* added for nav-toggle positioning */
-    position: relative;
-}
-
-header {
-    background: #136c72;
-    padding: 1em 0;
+.subtitle {
+    padding-top: 4.65rem;
     text-align: center;
+    font-size: 2.5rem;
+
 }
-
-.nav {
-    width: 100%;
-}
-
-
-
-.nav-toggle {
-    cursor: pointer;
-    border: 0;
-    width: 3em;
-    height: 3em;
-    padding: 0em;
-    border-radius: 50%;
-    background: #072A2D;
+p,
+li {
+    font-weight: 200;
     color: white;
-    transition: opacity 250ms ease;
-    
-    position: absolute;
-    left: 0;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 
-.nav-toggle:focus,
-.nav-toggle:hover {
-    opacity: .75;
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    /* padding-bottom: 1rem;  */
 }
 
-.hamburger {
+.left-img-col,
+.right-img-col {
     width: 50%;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 50%;
 }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    display: block;
-    margin: 0 auto;
-    height: 3px;
-    background: white;
+.left-text-col,
+.right-text-col {
+    width: 45%;
 }
 
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    width: 100%;
+.left-text-col {
+    text-align: left;
 }
 
-.hamburger::before {
-    transform: translateY(-6px);
-}
-
-.hamburger::after {
-    transform: translateY(3px);
-}
-
-/* made changes here from video
-   to make it more accessible.
-   
-   Works the same :) */
-.nav {
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-    font-size: 1rem;
-}
-
-.nav--visible {
-    visibility: visible;
-    height: auto;
-    position: relative;
-} 
-
-.nav__list
-{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav__item
-{
-    margin-top: 0.75em;
-}
-.nav__link
-{
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-.nav__link:hover, .nav__link:focus
-{
-    opacity: 0.65;
-}
-.nav__list--primary
-{
-    margin-bottom: 2em;
-}
-.nav__link--button
-{
-    padding: .25em .75em;
-    background: white;
-    color: #23424A;
-    border-radius: 100px;
-}
-.logo {
-    height: 30px;
-}
-
-
-.hero {
-    padding: 100px 0;
-    background-color: #23424A;
-    color: #FFF;
-}
-
-.hero__img {
-    margin-top: 2em;
-}
-
-
-.hero p {
-    margin-bottom: 3em;
+.right-text-col {
+    text-align: right;
 }
 
 .main {
-    margin-top: 3em;
-}
-
-
-.sidebar {
-    padding: 1em;
+    font-size: 2rem;
     text-align: center;
-    color: #fff;
-    background-color: #136c72;
-
+    width: 85%;
+    margin: 0 auto;
 }
 
+.skills {
+    /*background-color: #212122;*/
+}
 
-
-@media (min-width: 800px) {
-
-    
-    .nav-toggle {
+@media screen and (min-width: 800px)
+{
+    .nav-toggle-label
+    {
         display: none;
     }
-
-    .nav {
-        visibility: visible;
+    header
+    {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo
+    {
+        grid-column: 2 / 3;
+    }
+    nav
+    {
+        all: unset;
+        grid-column: 3 / 4;
         display: flex;
-        align-items: center;
-        height: auto;
-        position: relative;
         justify-content: flex-end;
+        align-items: center;
     }
-
-    .nav__list
+    nav ul
     {
         display: flex;
-        margin: 0;
     }
-
-    .nav__list--primary
+    nav li
     {
-        margin: 0 auto;
+        margin-left: 3em;
+        margin-bottom: 0;
     }
-    .nav__item
+    nav a
     {
-        margin: 0 0 0 1.5em;
+        opacity: 1;
+        position: relative;
     }
-
-    .row {
-        display: flex;
-        justify-content: space-between;
-
+    nav a::before
+    {
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transform-origin: left;
+        transition: transform ease-in-out 250ms;
     }
-
-    .hero__text {
-        width: 62%;
+    nav a:hover::before
+    {
+        transform: scale(1,1);
     }
-    
-    .hero__img {
-        width: 32%;
-        align-self: flex-start;
-        margin: 0;
-    }
-    
-    .primary-content {
-        width: 62%;
-    }
-
-    .sidebar {
-        width: 32%;
-    }
-    
-    
 }
