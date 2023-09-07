@@ -22,7 +22,7 @@ html
 .fade-in {
     display: none;
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transition: opacity 750ms ease-in;
   }
   
   .fade-in.appear {
