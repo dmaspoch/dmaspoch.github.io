@@ -325,10 +325,15 @@ a:link {
 
     nav {
         all: unset;
-        grid-column: 3 / 4;
+        grid-column: 3 / 4.7;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+    }
+
+    .info
+    {
+        max-width: 50%;
     }
 
     nav ul {
