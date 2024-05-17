@@ -194,6 +194,7 @@ body {
 h1 {
     padding-left: 1em;
     font-weight: 400;
+    text-align: center;
     /*color: #FA7B7B;*/
     /* background: linear-gradient(to right, #f32170,
             #ff6b08, #cf23cf, #eedd44); */
@@ -210,6 +211,7 @@ h2 {
     background: linear-gradient(to right, white, #FA7B7B, #cf23cf);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    text-align: center;
 }
 
 .main-title {
