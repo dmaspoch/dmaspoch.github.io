@@ -362,16 +362,11 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .info {
-        width: 20%;
-    }
-}
-
-@media screen and (width: 390px) {
+@media screen and (min-width: 390px) and (max-width: 800px) {
     .projects {
         flex-direction: column;
         height: 100%;
+        margin: auto;
     }
 
     .info {
@@ -384,5 +379,11 @@ a:hover {
         font-weight: 200;
         color: white;
         font-size: 1.1rem;
+    }
+}
+@media screen and (min-width: 800px){
+    .projects
+    {
+        flex-direction: row;
     }
 }
