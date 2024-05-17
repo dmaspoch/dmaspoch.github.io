@@ -387,3 +387,16 @@ a:hover {
         flex-direction: row;
     }
 }
+@media screen and (min-width: 1200px){
+    .info
+    {
+        max-width: 30%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .info
+    {
+        margin: 0 auto;
+    }
+}
