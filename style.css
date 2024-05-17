@@ -191,8 +191,7 @@ body {
     margin: 0;
 }
 
-h1
-{
+h1 {
     padding-left: 1em;
     font-weight: 400;
     /*color: #FA7B7B;*/
@@ -202,8 +201,8 @@ h1
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-h2
-{
+
+h2 {
     font-weight: 400;
     /*color: #FA7B7B;*/
     /* background: linear-gradient(to right, #f32170,
@@ -250,22 +249,19 @@ li {
     margin: 0 auto;
 }
 
-.main-text
-{
+.main-text {
     padding-top: 20em;
     max-width: 50%;
 }
 
-.img
-{
+.img {
     width: 50%;
     height: auto;
     display: block;
 }
 
 
-.projects
-{
+.projects {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -274,26 +270,24 @@ li {
     padding-bottom: 2em;
 }
 
-.info
-{
+.info {
     padding-left: 2em;
     width: 20%;
 }
 
 a:link {
     color: white;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     background: linear-gradient(to right, white, #FA7B7B, #cf23cf);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     text-decoration: underline;
-  }
-  
+}
 
-.center-item
-{
+
+.center-item {
     margin: auto;
     width: 50%;
 }
@@ -331,8 +325,7 @@ a:link {
         align-items: center;
     }
 
-    .info
-    {
+    .info {
         width: 50%;
     }
 
@@ -369,10 +362,27 @@ a:link {
     }
 }
 
-@media screen and (min-width: 1200px)
-{
-    .info
-    {
+@media screen and (min-width: 1200px) {
+    .info {
         width: 20%;
+    }
+}
+
+@media screen and (width: 390px) {
+    .projects {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .info {
+        padding-left: 0px;
+        width: 300px;
+    }
+
+    p,
+    li {
+        font-weight: 200;
+        color: white;
+        font-size: 1.1rem;
     }
 }
