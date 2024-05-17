@@ -362,7 +362,7 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 390px) and (max-width: 800px) {
+@media screen and (min-width: 200px) and (max-width: 800px) {
     .projects {
         flex-direction: column;
         height: 100%;
