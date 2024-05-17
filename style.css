@@ -333,7 +333,7 @@ a:link {
 
     .info
     {
-        max-width: 50%;
+        width: 50%;
     }
 
     nav ul {
@@ -366,5 +366,13 @@ a:link {
 
     nav a:hover::before {
         transform: scale(1, 1);
+    }
+}
+
+@media screen and (min-width: 1200px)
+{
+    .info
+    {
+        width: 20%;
     }
 }
