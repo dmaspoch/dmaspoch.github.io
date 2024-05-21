@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <h2 class="logo">DM</h2>
+        <h1 class="logo">DM</h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
@@ -20,9 +20,11 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li> <div class = "button">
-                    <a href = "documents/Daniel Maspoch - Resume (2024).pdf" download>Resume</a>
-                </div></li>
+                <li>
+                    <div class="button">
+                        <a href="documents/Daniel Maspoch - Resume (2024).pdf" download>Resume</a>
+                    </div>
+                </li>
             </ul>
         </nav>
         <label for="nav-toggle" class="nav-toggle-label">
@@ -32,85 +34,82 @@
         </label>
     </header>
 
-    <div class="main fade-in" id="home">
-        <h2 class="main-title">
+    <section class="main fade-in" id="home">
+        <h1 class="main-title">
             Hi, I am Daniel
-        </h2>
-        <div class="personal-img">
-            <img src="images/me.png" , alt="Image of Daniel Maspoch">
-        </div>
-        <div class="info-container fade-in">
-            <h2 class="subtitle" id="about">About Me</h2>
-            <p>
-                I am a student seeking a part-time job where I can share my problem-solving skills and knowledge of
-                computer science to help your organization achieve success and grow my industry experience.
-            </p>
-        </div>
-    </div>
+        </h1>
+        <img class="img" src="images/me.png" alt="Image of Daniel Maspoch">
+        <h2 class="subtitle" id="about">About Me</h2>
+        <p>
+            I am a student seeking a part-time job where I can share my problem-solving skills and knowledge of
+            computer science to help your organization achieve success and grow my industry experience.
+        </p>
+    </section>
 
-    <div class="skills info-container fade-in" id="skills">
+    <section class="skills" id="skills">
         <h2 class="subtitle">
             Technical and Personal Skills
         </h2>
-    </div>
-    <div class="info-container fade-in">
-        <ul style="list-style-type:square">
-            <li>Web development technologies (HTML, CSS)</li>
-            <li>Java (Object-oriented)</li>
-            <li>C (Stacks & heaps, recursion, binary search trees, linked lists)</li>
-            <li>Python</li>
-            <li>C# (game development)</li>
-            <li>Computer Skills</li>
-            <li>Positive Attitude</li>
-            <li>Friendly and Outgoing</li>
-            <li>Teamwork and Collaboration</li>
-            <li>Organized and Efficient</li>
-            <li>Relationship Building</li>
-            <li>Deadline Driven</li>
+        <div class="info-container fade-in">
+            <ul style="list-style-type:square">
+                <li>Web development technologies (HTML, CSS)</li>
+                <li>Java (Object-oriented)</li>
+                <li>C (Stacks & heaps, recursion, binary search trees, linked lists)</li>
+                <li>Python</li>
+                <li>C# (game development)</li>
+                <li>Computer Skills</li>
+                <li>Positive Attitude</li>
+                <li>Friendly and Outgoing</li>
+                <li>Teamwork and Collaboration</li>
+                <li>Organized and Efficient</li>
+                <li>Relationship Building</li>
+                <li>Deadline Driven</li>
 
-        </ul>
-        <h2 class="subtitle">
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="projects" id="projects">
+        <h1 class="subtitle">
             Projects
-        </h2>
-    </div>
-    <div class="projects fade-in" id="projects">
-        <img src="images/PI.png">
-        <div class="info">
-            <h1>Face-Recognition System</h1>
-            <ul style="list-style-type:square">
-                <li>
-                    Assembled a face-recognition system
-                    using a Raspberry PI and programmed in C as part of a team project at the University of Waterloo
-                </li>
-                <li>
-                    Uses Python computer vision libraries and a Raspberry Pi equipped with a camera
-                </li>
-                <li>
-                    Contains a number of features including a database running on a secondary Pi
-                    for storing security logs, a system for authenticating new users, and an alert system for
-                    unrecognized persons
-                </li>
-                <li>
-                    <a href="https://github.com/hudsonkoyanagi/se101-project/tree/main/COSRX_Final">Project
-                        Repository</a>
-                </li>
-            </ul>
+        </h1>
+        <div class="project-info">
+            <img class="img" src="images/PI.png" alt="Image of raspberry pi"/>
+            <div class="info-container">
+                <h1>Face-Recognition System</h1>
+                <ul style="list-style-type:square">
+                    <li>
+                        Assembled a face-recognition system
+                        using a Raspberry PI and programmed in C as part of a team project at the University of Waterloo
+                    </li>
+                    <li>
+                        Uses Python computer vision libraries and a Raspberry Pi equipped with a camera
+                    </li>
+                    <li>
+                        Contains a number of features including a database running on a secondary Pi
+                        for storing security logs, a system for authenticating new users, and an alert system for
+                        unrecognized persons
+                    </li>
+                    <li>
+                        <a href="https://github.com/hudsonkoyanagi/se101-project/tree/main/COSRX_Final">Project
+                            Repository</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-
-   <div class = "projects fade-in">
-            <img src = "images/laser.png">
-        <div class = "info">
-            <h1>Unity Projects</h1>
-            <ul style="list-style-type:square">
-                <li>Projects I created using the Unity game engine include a flying simulator, 
-                    first-person shooter, and a laser defender simulator
-
-                </li>
-            </ul>
+        <div class="project-info">
+            <img class="img" src="images/laser.png" alt="Screenshot of laser defender game"/>
+            <div class="info-container">
+                <h2>Unity Projects</h2>
+                <ul style="list-style-type:square">
+                    <li>Projects I created using the Unity game engine include a flying simulator,
+                        first-person shooter, and a laser defender simulator
+                        </li>
+                </ul>
+            </div>
         </div>
-    </div>
-
+    </section>
     <footer>
         <div class="links-container">
             <div class="shrink">

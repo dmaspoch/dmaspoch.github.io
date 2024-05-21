@@ -1,9 +1,16 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: "Sk-Modernist";
     src: url("fonts/Sk-Modernist-Regular.otf");
     font-weight: 200;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Sk-Modernist";
     src: url("fonts/Sk-Modernist-Bold.otf");
@@ -14,17 +21,23 @@
 html {
     scroll-behavior: smooth;
     scroll-padding: 6rem;
+    height: 100%;
+}
+
+body {
+    font-family: 'Sk-Modernist', sans-serif;
+    background-color: #171717;
+    margin: 0;
 }
 
 footer {
     background-color: black;
     display: flex;
     flex-direction: row;
-    align-items: right;
     justify-content: center;
-    margin: 0 auto;
-    padding-top: 1em;
-    padding-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .footer-logo {
@@ -75,16 +88,6 @@ footer {
 /*Navigation styles start here*/
 :root {
     --background: rgba(0, 0, 0, 0.8);
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-ul {
-    align-self: center;
 }
 
 header {
@@ -182,23 +185,16 @@ nav a:hover {
     top: 7px;
 }
 
-
-body {
-    font-family: 'Sk-Modernist', sans-serif;
-    background-color: #171717;
-    margin: 0;
-}
-
 h1 {
     padding-left: 1em;
     font-weight: 400;
-    text-align: center;
     /*color: #FA7B7B;*/
     /* background: linear-gradient(to right, #f32170,
             #ff6b08, #cf23cf, #eedd44); */
     background: linear-gradient(to right, white, #FA7B7B, #cf23cf);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    margin-block: 1rem;
 }
 
 h2 {
@@ -210,6 +206,7 @@ h2 {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     text-align: center;
+    margin-block: 1rem;
 }
 
 .main-title {
@@ -231,22 +228,24 @@ li {
     font-weight: 200;
     color: white;
     font-size: 1.25rem;
-    margin-bottom: 10px;
 }
 
 .info-container {
-    margin: auto;
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    padding: 0 0.5rem;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
+    align-items: center;
+}
+
+.main p {
+    padding: 0 1rem;
     text-align: center;
-    margin: 0 auto;
 }
 
 .main-text {
@@ -255,24 +254,28 @@ li {
 }
 
 .img {
-    width: 50%;
-    height: auto;
+    width: 100%;
     display: block;
+
 }
 
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
 
 .projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    width: auto;
-    height: 35em;
-    padding-bottom: 2em;
+    align-items: center;
 }
 
-.info {
-    padding-left: 2em;
-    width: 20%;
+.project-info {
+    display: flex;
+    flex-direction: row;
 }
 
 a:link {
@@ -362,41 +365,43 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 200px) and (max-width: 800px) {
+@media screen and (min-width: 320px) {
+    .img {
+        width: 100%;
+    }
+
+    .main p {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .info-container {
+        padding: 0 0.5rem;
+    }
+
     .projects {
         flex-direction: column;
-        height: 100%;
-        margin: auto;
+        justify-content: center;
+        align-items: center;
     }
 
-    .info {
-        padding-left: 0px;
-        width: 300px;
+    .project-info {
+        flex-direction: column;
     }
 
-    p,
-    li {
-        font-weight: 200;
-        color: white;
-        font-size: 1.1rem;
-    }
+
 }
-@media screen and (min-width: 800px){
-    .projects
-    {
+
+@media screen and (min-width: 1024px) {
+    .img {
+        width: 30%;
+    }
+    .skills .info-container {
+        justify-content: center;
+    }
+
+    .project-info {
+        display: flex;
         flex-direction: row;
-    }
-}
-@media screen and (min-width: 1200px){
-    .info
-    {
-        max-width: 35%;
-    }
-}
-
-@media screen and (max-width: 800px){
-    .info
-    {
-        margin: 0 auto;
     }
 }
